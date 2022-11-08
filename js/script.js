@@ -30,3 +30,8 @@ let testArray = ["One", "Two", "Three", "Four"];
 function randNameBtn() {
     nameInp.value = `${randomElement(testArray)}`;
 }
+
+// Change the bonus stats preview
+let raceVal = raceSelect.value;
+let classVal = classSelect.value;
+
