@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script defer src="js/random-library.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <h1>Randomly Generated DND Character Sheet</h1>
-    <h3>Select Class and Race</h3>
+    <h3>Character Name:</h3>
+    <div>
+        <label for="name-inp">Character Name:</label>
+        <input type="text" id="name-inp">
+        <button id="rand-name-btn">Random Name</button>
+    </div>
+    
+    <h3>Select Class and Race:</h3>
     <div id="race-div">
         <label for="race">Select a race:</label>
         <select name="race" id="races">
@@ -37,8 +45,8 @@
             <option value="wizard">Wizard</option>
         </select>
     </div>
-    <p>Bonus traits and saves: <span>----</span></p>
+    <p>Bonus traits and saves: <span id="traits-bonus">----</span></p>
     <br>
-    <button>Next</button>
+    <button id="generate-btn">Generate</button>
 </body>
 </html>
