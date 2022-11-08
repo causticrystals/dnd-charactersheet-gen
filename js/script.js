@@ -4,7 +4,7 @@ let raceSelect = document.getElementById("races");
 let classSelect = document.getElementById("classes");
 // button variables
 document.getElementById("rand-name-btn").addEventListener("click", randNameBtn);
-document.getElementById("generate-btn")
+document.getElementById("preview-btn").addEventListener("click", previewBtn);
 
 // span variables
 let traitsBonus = document.getElementById("traits-bonus");
@@ -35,3 +35,6 @@ function randNameBtn() {
 let raceVal = raceSelect.value;
 let classVal = classSelect.value;
 
+function previewBtn() {
+    
+}
