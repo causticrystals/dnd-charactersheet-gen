@@ -32,9 +32,8 @@ function randNameBtn() {
 }
 
 // Change the bonus stats preview
-let raceVal = raceSelect.value;
-let classVal = classSelect.value;
-
 function previewBtn() {
-    
+    let raceVal = raceSelect.value;
+    let classVal = classSelect.value;
+
 }
