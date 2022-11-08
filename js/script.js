@@ -36,4 +36,7 @@ function previewBtn() {
     let raceVal = raceSelect.value;
     let classVal = classSelect.value;
 
+    // calculate race stats
+
+    // calculate class stats
 }
