@@ -76,7 +76,6 @@ function previewBtn() {
     }
 }
 
-// Helper function for class traits
 function classBonus(saveTrait, die, ability) {
     saves.innerHTML = saveTrait;
     hitDie.innerHTML = die;
