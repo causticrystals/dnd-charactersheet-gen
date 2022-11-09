@@ -40,7 +40,9 @@ function previewBtn() {
     let race = raceSelect.value;
 
     // race traits
-    if (race === 'dwarf') {
+    if (race === 'blankR') {
+        traitsBonus.innerHTML = "";
+    } else if (race === 'dwarf') {
         traitsBonus.innerHTML = "+2 Constitution";
     } else if (race === 'elf') {
         traitsBonus.innerHTML = "+2 Dexterity";
@@ -57,7 +59,9 @@ function previewBtn() {
     }
 
     // class saves
-    if (clasSel === 'barbarian') {
+    if (clasSel === 'blankC') {
+        classBonus("", "", "");
+    } else if (clasSel === 'barbarian') {
         classBonus("Strength + Constitution", "d12", "Strength");
     } else if (clasSel === 'bard') {
         classBonus("Dexterity + Charisma", "d8", "Charisma");
