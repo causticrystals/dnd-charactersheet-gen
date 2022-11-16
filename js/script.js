@@ -4,13 +4,20 @@ let raceSelect = document.getElementById("races");
 let classSelect = document.getElementById("classes");
 // button variables
 document.getElementById("rand-name-btn").addEventListener("click", randNameBtn);
-document.getElementById("preview-btn").addEventListener("click", previewBtn);
+document.getElementById("preview-stats-btn").addEventListener("click", previewStatBtn);
+document.getElementById("preview-traits-btn").addEventListener("click", previewTraitsBtn);
 
 // span variables
 let traitsBonus = document.getElementById("traits-bonus");
 let saves = document.getElementById("saves");
 let hitDie = document.getElementById("hit-die");
 let prAbility = document.getElementById("prime-ability");
+let strSpan = document.getElementById("str-span");
+let dexSpan = document.getElementById("dex-span");
+let conSpan = document.getElementById("con-span");
+let intSpan = document.getElementById("int-span");
+let wisSpan = document.getElementById("wis-span");
+let charSpan = document.getElementById("char-span");
 
 // stats variables
 let str = 0;
@@ -35,7 +42,7 @@ function randNameBtn() {
 }
 
 // Change the bonus stats preview
-function previewBtn() {
+function previewStatBtn() {
     let clasSel = classSelect.value;
     let race = raceSelect.value;
 
@@ -84,4 +91,14 @@ function classBonus(saveTrait, die, ability) {
     saves.innerHTML = saveTrait;
     hitDie.innerHTML = die;
     prAbility.innerHTML = ability;
+}
+
+// Calculate stats
+function previewTraitsBtn() {
+    strSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    dexSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    conSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    intSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    wisSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    charSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
 }
