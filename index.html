@@ -11,62 +11,68 @@
 </head>
 <body>
     <h1>D&D Character Sheet Generator</h1>
-
-    <div id="char-name-div">
-        <h3>Character Name:</h3>
-        <label for="name-inp">Character Name:</label>
-        <input type="text" id="name-inp">
-        <button id="rand-name-btn">Random Name</button>
+    <div id="start-div">
+        <button>Begin</button>
     </div>
-
-    <div id="race-class-div">
-        <h3>Select Class and Race:</h3>
-        <div id="race-div">
-            <label for="race">Select a race:</label>
-            <select name="race" id="races">
-                <option value="blankR">Select Option</option>
-                <option value="dwarf">Dwarf</option>
-                <option value="elf">Elf</option>
-                <option value="half-elf">Half-Elf</option>
-                <option value="human">Human</option>
-                <option value="dragonborn">Dragonborn</option>
-                <option value="halfling">Halfling</option>
-                <option value="tiefling">Tiefling</option>
-            </select>
+    
+    <div id="sheet-stats-div">
+        <div id="char-name-div">
+            <h3>Character Name:</h3>
+            <label for="name-inp">Character Name:</label>
+            <input type="text" id="name-inp">
+            <button id="rand-name-btn">Random Name</button>
         </div>
-        <br>
-        <div id="class-div">
-            <label for="class">Select a class:</label>
-            <select name="class" id="classes">
-                <option value="blankC">Select Option</option>
-                <option value="barbarian">Barbarian</option>
-                <option value="bard">Bard</option>
-                <option value="cleric">Cleric</option>
-                <option value="druid">Druid</option>
-                <option value="fighter">Fighter</option>
-                <option value="paladin">Paladin</option>
-                <option value="rogue">Rogue</option>
-                <option value="wizard">Wizard</option>
-            </select>
+    
+        <div id="race-class-div">
+            <h3>Select Class and Race:</h3>
+            <div id="race-div">
+                <label for="race">Select a race:</label>
+                <select name="race" id="races">
+                    <option value="blankR">Select Option</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="half-elf">Half-Elf</option>
+                    <option value="human">Human</option>
+                    <option value="dragonborn">Dragonborn</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="tiefling">Tiefling</option>
+                </select>
+            </div>
+            <br>
+            <div id="class-div">
+                <label for="class">Select a class:</label>
+                <select name="class" id="classes">
+                    <option value="blankC">Select Option</option>
+                    <option value="barbarian">Barbarian</option>
+                    <option value="bard">Bard</option>
+                    <option value="cleric">Cleric</option>
+                    <option value="druid">Druid</option>
+                    <option value="fighter">Fighter</option>
+                    <option value="paladin">Paladin</option>
+                    <option value="rogue">Rogue</option>
+                    <option value="wizard">Wizard</option>
+                </select>
+            </div>
+            <div id="traits-saves">
+                <p>Bonus traits: <span id="traits-bonus"></span></p>
+                <p>Saves: <span id="saves"></span></p>
+                <p>Hit die: <span id="hit-die"></span></p>
+                <p>Primary Ability: <span id="prime-ability"></span></p>
+                <button id="preview-stats-btn">Preview stats</button>
+            </div>
         </div>
-        <div id="traits-saves">
-            <p>Bonus traits: <span id="traits-bonus"></span></p>
-            <p>Saves: <span id="saves"></span></p>
-            <p>Hit die: <span id="hit-die"></span></p>
-            <p>Primary Ability: <span id="prime-ability"></span></p>
-            <button id="preview-stats-btn">Preview stats</button>
+        
+        <div id="traits-div">
+            <h3>Traits (without bonuses):</h3>
+            <p>Strength: <span id="str-span"></span></p>
+            <p>Dexterity: <span id="dex-span"></span></p>
+            <p>Constitution: <span id="con-span"></span></p>
+            <p>Intelligence: <span id="int-span"></span></p>
+            <p>Wisdom: <span id="wis-span"></span></p>
+            <p>Charisma: <span id="char-span"></span></p>
+            <button id="preview-traits-btn">Preview Traits</button>
         </div>
     </div>
     
-    <div id="traits-div">
-        <h3>Traits (without bonuses):</h3>
-        <p>Strength: <span id="str-span"></span></p>
-        <p>Dexterity: <span id="dex-span"></span></p>
-        <p>Constitution: <span id="con-span"></span></p>
-        <p>Intelligence: <span id="int-span"></span></p>
-        <p>Wisdom: <span id="wis-span"></span></p>
-        <p>Charisma: <span id="char-span"></span></p>
-        <button id="preview-traits-btn">Preview Traits</button>
-    </div>
 </body>
 </html>
