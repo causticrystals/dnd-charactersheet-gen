@@ -18,6 +18,12 @@ let conSpan = document.getElementById("con-span");
 let intSpan = document.getElementById("int-span");
 let wisSpan = document.getElementById("wis-span");
 let charSpan = document.getElementById("char-span");
+let strModSpan = document.getElementById("str-mod-span");
+let dexModSpan = document.getElementById("dex-mod-span");
+let conModSpan = document.getElementById("con-mod-span");
+let intModSpan = document.getElementById("int-mod-span");
+let wisModSpan = document.getElementById("wis-mod-span");
+let charModSpan = document.getElementById("char-mod-span");
 
 // stats variables
 let str = 0;
@@ -87,18 +93,48 @@ function previewStatBtn() {
     }
 }
 
+// Calculate stats
+function previewTraitsBtn() {
+    strSpan.innerHTML = traitsGenHelp();
+    dexSpan.innerHTML = traitsGenHelp();
+    conSpan.innerHTML = traitsGenHelp();
+    intSpan.innerHTML = traitsGenHelp();
+    wisSpan.innerHTML = traitsGenHelp();
+    charSpan.innerHTML = traitsGenHelp();
+}
+
+// Helper functions
 function classBonus(saveTrait, die, ability) {
     saves.innerHTML = saveTrait;
     hitDie.innerHTML = die;
     prAbility.innerHTML = ability;
 }
 
-// Calculate stats
-function previewTraitsBtn() {
-    strSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    dexSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    conSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    intSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    wisSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    charSpan.innerHTML = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+function traitsGenHelp() {
+    let traitNum = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    let modNum;
+    let numPos;
+    if (traitNum <= 7) {
+        numPos = "";
+        modNum = -2;
+    } else if (traitNum <= 9) {
+        numPos = "";
+        modNum = -1;
+    } else if (traitNum <= 11) {
+        numPos = "+";
+        modNum = 0;
+    } else if (traitNum <= 13) {
+        numPos = "+";
+        modNum = 1;
+    } else if (traitNum <= 15) {
+        numPos = "+";
+        modNum = 2;
+    } else if (traitNum <= 17) {
+        numPos = "+";
+        modNum = 3;
+    } else {
+        numPos = "+";
+        modNum = 4;
+    }
+    return `${traitNum} Modifier: ${numPos}${modNum}`;
 }
