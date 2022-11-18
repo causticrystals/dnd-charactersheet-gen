@@ -1,7 +1,6 @@
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
 }
 /* 
 #sheet-stats-div {
@@ -12,4 +11,8 @@ body {
     padding: 10px 32px;
     text-align: center;
     font-size: 16px;
+}
+
+#char-bgr-desc {
+    padding: 0px 30px;
 }
