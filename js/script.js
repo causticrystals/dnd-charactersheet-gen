@@ -2,10 +2,14 @@
 let nameInp = document.getElementById("name-inp");
 let raceSelect = document.getElementById("races");
 let classSelect = document.getElementById("classes");
-// button variables
+let charBgrSelect = document.getElementById("backgrounds");
+
+// button variables & event listeners
 document.getElementById("rand-name-btn").addEventListener("click", randNameBtn);
-document.getElementById("preview-stats-btn").addEventListener("click", previewStatBtn);
+raceSelect.addEventListener("click", previewStats);
+classSelect.addEventListener("click", previewStats);
 document.getElementById("preview-traits-btn").addEventListener("click", previewTraitsBtn);
+charBgrSelect.addEventListener("click", charBgrGen);
 
 // span variables
 let traitsBonus = document.getElementById("traits-bonus");
@@ -24,6 +28,8 @@ let conModSpan = document.getElementById("con-mod-span");
 let intModSpan = document.getElementById("int-mod-span");
 let wisModSpan = document.getElementById("wis-mod-span");
 let charModSpan = document.getElementById("char-mod-span");
+let charBgrDesc = document.getElementById("char-bgr-desc");
+let charBgrSkills = document.getElementById("char-bgr-extra-skills");
 
 // stats variables
 let str = 0;
@@ -48,7 +54,7 @@ function randNameBtn() {
 }
 
 // Change the bonus stats preview
-function previewStatBtn() {
+function previewStats() {
     let clasSel = classSelect.value;
     let race = raceSelect.value;
 
@@ -90,6 +96,32 @@ function previewStatBtn() {
         classBonus("Dexterity + Inteligence", "d8", "Dexterity");
     } else if (clasSel === 'wizard') {
         classBonus("Inteligence + Wisdom", "d6", "Inteligence");
+    }
+}
+
+// Character background
+function charBgrGen() {
+    let background = charBgrSelect.value;
+
+    if(background === 'blankBgr') {
+        charBgrDesc.innerHTML = "";
+    } else if (background === 'acolyte') {
+        charBgrDesc.innerHTML = "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine.";
+    } else if (background === 'criminal') {
+        charBgrDesc.innerHTML = "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You're far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.";
+        charBgrSkills.innerHTML = "";
+    } else if (background === 'folk-hero') {
+        charBgrDesc.innerHTML = "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.";
+        charBgrSkills.innerHTML = "";
+    } else if (background === 'noble') {
+        charBgrDesc.innerHTML = "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.";
+        charBgrSkills.innerHTML = "";
+    } else if (background === 'sage') {
+        charBgrDesc.innerHTML = "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.";
+        charBgrSkills.innerHTML = "";
+    } else if (background === 'soldier') {
+        charBgrDesc.innerHTML = "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war";
+        charBgrSkills.innerHTML = "";
     }
 }
 
