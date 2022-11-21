@@ -32,10 +32,6 @@ let charModSpan = document.getElementById("char-mod-span");
 let charBgrDesc = document.getElementById("char-bgr-desc");
 let charBgrSkills = document.getElementById("char-bgr-extra-skills");
 
-// Race and Class arrays
-let races = ["Dwarf", "Elf", "Half-Elf", "Human", "Dragonborn", "Halfling", "Tiefling"];
-let clases = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Rogue", "Wizard"];
-
 // Array for character sheet
 let charSheet = [];
 
