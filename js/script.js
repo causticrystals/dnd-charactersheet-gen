@@ -10,6 +10,7 @@ raceSelect.addEventListener("click", previewStats);
 classSelect.addEventListener("click", previewStats);
 document.getElementById("preview-traits-btn").addEventListener("click", previewTraitsBtn);
 charBgrSelect.addEventListener("click", charBgrGen);
+document.getElementById("done-btn").addEventListener("click", createSheetArray);
 
 // span variables
 let traitsBonus = document.getElementById("traits-bonus");
@@ -106,21 +107,21 @@ function charBgrGen() {
     if(background === 'blankBgr') {
         charBgrDesc.innerHTML = "";
     } else if (background === 'acolyte') {
-        charBgrDesc.innerHTML = "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine.";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine.</span>";
     } else if (background === 'criminal') {
-        charBgrDesc.innerHTML = "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You're far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You're far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.";
         charBgrSkills.innerHTML = "";
     } else if (background === 'folk-hero') {
-        charBgrDesc.innerHTML = "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.</span>";
         charBgrSkills.innerHTML = "";
     } else if (background === 'noble') {
-        charBgrDesc.innerHTML = "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.</span>";
         charBgrSkills.innerHTML = "";
     } else if (background === 'sage') {
-        charBgrDesc.innerHTML = "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</span>";
         charBgrSkills.innerHTML = "";
     } else if (background === 'soldier') {
-        charBgrDesc.innerHTML = "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war";
+        charBgrDesc.innerHTML = "<span class='bgr-class'>War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war</span>";
         charBgrSkills.innerHTML = "";
     }
 }
@@ -133,6 +134,11 @@ function previewTraitsBtn() {
     intSpan.innerHTML = traitsGenHelp();
     wisSpan.innerHTML = traitsGenHelp();
     charSpan.innerHTML = traitsGenHelp();
+}
+
+// Send character selections to an array
+function createSheetArray() {
+
 }
 
 // Helper functions
