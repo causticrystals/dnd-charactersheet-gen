@@ -32,20 +32,12 @@ let charModSpan = document.getElementById("char-mod-span");
 let charBgrDesc = document.getElementById("char-bgr-desc");
 let charBgrSkills = document.getElementById("char-bgr-extra-skills");
 
-// stats variables
-let str = 0;
-let dex = 0;
-let con = 0;
-let int = 0;
-let wis = 0;
-let char = 0;
-
 // Race and Class arrays
 let races = ["Dwarf", "Elf", "Half-Elf", "Human", "Dragonborn", "Halfling", "Tiefling"];
 let clases = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Paladin", "Rogue", "Wizard"];
 
 // Array for character sheet
-let newSheet = [];
+let charSheet = [];
 
 // test array (change to a name array)
 let testArray = ["One", "Two", "Three", "Four"];
@@ -67,15 +59,15 @@ function previewStats() {
     } else if (race === 'elf') {
         traitsBonus.innerHTML = "+2 Dexterity";
     } else if (race === 'half-elf') {
-        traitsBonus.innerHTML = "+2 Charisma & +1 to all other scores";
+        traitsBonus.innerHTML = "+2 Charisma +1 to all other scores";
     } else if (race === 'human') {
         traitsBonus.innerHTML = "+1 to all scores";
     } else if (race === 'dragonborn') {
-        traitsBonus.innerHTML = "+2 Strength & +1 Charisma";
+        traitsBonus.innerHTML = "+2 Strength +1 Charisma";
     } else if (race === 'halfling') {
         traitsBonus.innerHTML = "+2 Dexterity";
     } else if (race === 'tiefling') {
-        traitsBonus.innerHTML = "+2 Charisma & +1 Inteligence";
+        traitsBonus.innerHTML = "+2 Charisma +1 Inteligence";
     }
 
     // class saves
@@ -110,19 +102,14 @@ function charBgrGen() {
         charBgrDesc.innerHTML = "<span class='bgr-class'>You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine.</span>";
     } else if (background === 'criminal') {
         charBgrDesc.innerHTML = "<span class='bgr-class'>You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You're far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.";
-        charBgrSkills.innerHTML = "";
     } else if (background === 'folk-hero') {
         charBgrDesc.innerHTML = "<span class='bgr-class'>You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.</span>";
-        charBgrSkills.innerHTML = "";
     } else if (background === 'noble') {
         charBgrDesc.innerHTML = "<span class='bgr-class'>You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.</span>";
-        charBgrSkills.innerHTML = "";
     } else if (background === 'sage') {
         charBgrDesc.innerHTML = "<span class='bgr-class'>You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</span>";
-        charBgrSkills.innerHTML = "";
     } else if (background === 'soldier') {
         charBgrDesc.innerHTML = "<span class='bgr-class'>War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war</span>";
-        charBgrSkills.innerHTML = "";
     }
 }
 
@@ -138,7 +125,10 @@ function previewTraitsBtn() {
 
 // Send character selections to an array
 function createSheetArray() {
-
+    // stats variables
+    let newSheet = Object.assign({str: strSpan.innerHTML}, {dex: dexSpan.innerHTML}, {con: conSpan.innerHTML}, {int: intSpan.innerHTML}, {wis: wisSpan.innerHTML}, {char: charSpan.innerHTML}, {race: raceSelect.value}, {class: classSelect.value}, {bonus: traitsBonus.innerHTML}, {saves: saves.innerHTML}, {hitDie: hitDie.innerHTML}, {primary: prAbility.innerHTML}, {background: charBgrSelect.value}, {name: nameInp.value});
+    JSON.stringify(newSheet);
+    charSheet.push(newSheet);
 }
 
 // Helper functions
