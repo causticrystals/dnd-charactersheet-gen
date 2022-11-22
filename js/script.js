@@ -46,6 +46,7 @@ function randNameBtn() {
 function previewStats() {
     let clasSel = classSelect.value;
     let race = raceSelect.value;
+    // extra trait bonus variables
 
     // race traits
     if (race === 'blankR') {
