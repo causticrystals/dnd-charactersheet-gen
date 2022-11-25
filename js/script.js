@@ -181,5 +181,5 @@ function modGenHelp(score) {
         numPos = "+";
         modNum = 4;
     }
-    return `Modifier: ${numPos}${modNum}`
+    return `${numPos}${modNum}`
 }
