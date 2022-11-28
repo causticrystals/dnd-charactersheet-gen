@@ -181,7 +181,7 @@ function previewTraitsBtn() {
 // Send character selections to an array
 function createSheetArray() {
     // stats variables
-    let newSheet = Object.assign({str: strSpan.innerHTML}, {dex: dexSpan.innerHTML}, {con: conSpan.innerHTML}, {int: intSpan.innerHTML}, {wis: wisSpan.innerHTML}, {char: charSpan.innerHTML}, {race: raceSelect.value}, {class: classSelect.value}, {bonus: traitsBonus.innerHTML}, {saves: saves.innerHTML}, {hitDie: hitDie.innerHTML}, {primary: prAbility.innerHTML}, {background: charBgrSelect.value}, {name: nameInp.value}, {strMod: strModSpan.innerHTML}, {dexMod: dexModSpan.innerHTML}, {conMod: conModSpan.innerHTML}, {intMod: intModSpan.innerHTML}, {wisMod: wisModSpan.innerHTML}, {charMod: charModSpan.innerHTML});
+    let newSheet = Object.assign({str: strSpan.innerHTML}, {dex: dexSpan.innerHTML}, {con: conSpan.innerHTML}, {int: intSpan.innerHTML}, {wis: wisSpan.innerHTML}, {char: charSpan.innerHTML}, {race: raceSelect.value}, {class: classSelect.value}, {saves: saves.innerHTML}, {hitDie: hitDie.innerHTML}, {primary: prAbility.innerHTML}, {background: charBgrSelect.value}, {name: nameInp.value}, {strMod: strModSpan.innerHTML}, {dexMod: dexModSpan.innerHTML}, {conMod: conModSpan.innerHTML}, {intMod: intModSpan.innerHTML}, {wisMod: wisModSpan.innerHTML}, {charMod: charModSpan.innerHTML});
     JSON.stringify(newSheet);
     charSheet.push(newSheet);
 }
