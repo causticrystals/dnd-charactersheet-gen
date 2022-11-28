@@ -61,18 +61,37 @@ function previewStats() {
         traitsBonus.innerHTML = "";
     } else if (race === 'dwarf') {
         traitsBonus.innerHTML = "+2 Constitution";
+        conAbility = 2;
     } else if (race === 'elf') {
         traitsBonus.innerHTML = "+2 Dexterity";
+        dexAbility = 2
     } else if (race === 'half-elf') {
         traitsBonus.innerHTML = "+2 Charisma +1 to all other scores";
+        charAbility = 2;
+        strAbility = 1;
+        dexAbility = 1;
+        intAbility = 1;
+        wisAbility = 1;
+        charAbility = 1;
     } else if (race === 'human') {
         traitsBonus.innerHTML = "+1 to all scores";
+        strAbility = 1;
+        dexAbility = 1;
+        conAbility = 1;
+        intAbility = 1;
+        wisAbility = 1;
+        charAbility = 1;
     } else if (race === 'dragonborn') {
         traitsBonus.innerHTML = "+2 Strength +1 Charisma";
+        strAbility = 2;
+        charAbility = 1;
     } else if (race === 'halfling') {
         traitsBonus.innerHTML = "+2 Dexterity";
+        dexAbility = 2;
     } else if (race === 'tiefling') {
         traitsBonus.innerHTML = "+2 Charisma +1 Inteligence";
+        charAbility = 2;
+        intAbility = 1;
     }
 
     // class saves
@@ -121,12 +140,12 @@ function charBgrGen() {
 // Calculate stats
 function previewTraitsBtn() {
     // Ability scores
-    strSpan.innerHTML = abilityGenHelp();
-    dexSpan.innerHTML = abilityGenHelp();
-    conSpan.innerHTML = abilityGenHelp();
-    intSpan.innerHTML = abilityGenHelp();
-    wisSpan.innerHTML = abilityGenHelp();
-    charSpan.innerHTML = abilityGenHelp();
+    strSpan.innerHTML = abilityGenHelp(strAbility);
+    dexSpan.innerHTML = abilityGenHelp(dexAbility);
+    conSpan.innerHTML = abilityGenHelp(conAbility);
+    intSpan.innerHTML = abilityGenHelp(intAbility);
+    wisSpan.innerHTML = abilityGenHelp(wisAbility);
+    charSpan.innerHTML = abilityGenHelp(charAbility);
     // Modifiers
     strModSpan.innerHTML = modGenHelp(strSpan.innerHTML);
     dexModSpan.innerHTML = modGenHelp(dexSpan.innerHTML);
@@ -151,8 +170,10 @@ function classBonus(saveTrait, die, ability) {
     prAbility.innerHTML = ability;
 }
 
-function abilityGenHelp() {
-    let traitNum = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+function abilityGenHelp(ability) {
+    // let traitNum = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
+    let traitNum = 6;
+    traitNum + ability;
     return `${traitNum}`;
 }
 
