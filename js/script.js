@@ -163,12 +163,12 @@ function charBgrGen() {
 // Calculate stats
 function previewTraitsBtn() {
     // Ability scores
-    strSpan.innerHTML = abilityGenHelp();
-    dexSpan.innerHTML = abilityGenHelp();
-    conSpan.innerHTML = abilityGenHelp();
-    intSpan.innerHTML = abilityGenHelp();
-    wisSpan.innerHTML = abilityGenHelp();
-    charSpan.innerHTML = abilityGenHelp();
+    strSpan.innerHTML = abilityGenHelp(strAbility);
+    dexSpan.innerHTML = abilityGenHelp(dexAbility);
+    conSpan.innerHTML = abilityGenHelp(conAbility);
+    intSpan.innerHTML = abilityGenHelp(intAbility);
+    wisSpan.innerHTML = abilityGenHelp(wisAbility);
+    charSpan.innerHTML = abilityGenHelp(charAbility);
     // Modifiers
     strModSpan.innerHTML = modGenHelp(strSpan.innerHTML);
     dexModSpan.innerHTML = modGenHelp(dexSpan.innerHTML);
@@ -193,10 +193,10 @@ function classBonus(saveTrait, die, ability) {
     prAbility.innerHTML = ability;
 }
 
-function abilityGenHelp() {
+function abilityGenHelp(bonus) {
     let traitNum = randomInt(2, 7) + randomInt(2, 7) + randomInt(2, 7);
-    traitNum;
-    return `${traitNum}`;
+    let abilityNum = traitNum + bonus;
+    return `${abilityNum}`;
 }
 
 function modGenHelp(score) {
