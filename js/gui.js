@@ -6,14 +6,16 @@ let sheetDiv = document.getElementById("sheet-div");
 
 // buttons clicked
 beginBtn.addEventListener("click", displayStatsDiv);
-// document.getElementById("done-btn").addEventListener("click", displayCharacterSheet);
+document.getElementById("done-btn").addEventListener("click", displayCharacterSheet);
 
 function displayStatsDiv() {
     beginDiv.style.display = "none";
     sheetStatsDiv.style.display = "block";
 }
 
-// function displayCharacterSheet() {
-//     sheetStatsDiv.style.display = "none";
-//     sheetDiv.style.display = "block";
-// }
+function displayCharacterSheet() {
+    sheetStatsDiv.style.display = "none";
+    sheetDiv.style.display = "flex";
+}
+
+// putting the char sheet array onto the page
