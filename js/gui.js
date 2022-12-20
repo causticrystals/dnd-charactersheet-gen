@@ -15,7 +15,7 @@ function displayStatsDiv() {
 
 function displayCharacterSheet() {
     sheetStatsDiv.style.display = "none";
-    sheetDiv.style.display = "flex";
+    sheetDiv.style.display = "block";
 }
 
 // putting the char sheet array onto the page

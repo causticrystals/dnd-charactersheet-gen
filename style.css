@@ -20,7 +20,7 @@ body {
 }
 
 /* css for sheet */
-body {
+#sheetDiv {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -147,7 +147,7 @@ body {
     padding: 0px 7px;
 }
 
-#sheet-stats-div {
+#sheetScoresDiv {
     background: rgb(171, 171, 226);
 }
 
