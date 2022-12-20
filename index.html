@@ -92,5 +92,94 @@
         <p id="sheet-name">Character name</p> <p id="sheet-clLv">class & level</p> <p id="sheet-bgr">background</p> <p id="sheet-race">race</p> <p id="sheet-saves">saves</p> <p id="sheet-hitDie">hit die</p> <p id="sheet-strSc">str score</p> <p id="sheet-strMo">str mod</p> <p id="sheet-dexSc">dex score</p> <p id="sheet-dexMo">dex mod</p> <p id="sheet-conSc">con score</p> <p id="sheet-conMo">con mod</p> <p id="sheet-intSc">int score</p> <p id="sheet-intMo">int mod</p> <p id="sheet-wisSc">wis score</p> <p id="sheet-wisMo">wis mod</p> <p id="sheet-charSc">char score</p> <p id="sheet-charMo">char mod</p>
     </div>
     
+    <div id="sheetDiv">
+        <div id="top-sheet-div">
+            <div id="sheet-name">Character name</div> <div id="classRaceDivs"><div id="sheet-clLv">class & level</div> <div id="sheet-bgr">background</div> <div class="break"></div> <div id="sheet-race">race</div> <div id="sheet-char-align">alignment</div> </div>
+        </div>
+        <div id="bottomHalf">
+            <div id="sheet-stats-div">
+                <div id="sheet-strSc" class="scores">str score</div> <div id="sheet-strMo" class="mods">str mod</div> <div id="sheet-dexSc" class="scores">dex score</div> <div id="sheet-dexMo" class="mods">dex mod</div> <div id="sheet-conSc" class="scores">con score</div> <div id="sheet-conMo" class="mods">con mod</div> <div id="sheet-intSc" class="scores">int score</div> <div id="sheet-intMo" class="mods">int mod</div> <div id="sheet-wisSc" class="scores">wis score</div> <div id="sheet-wisMo" class="mods">wis mod</div> <div id="sheet-charSc" class="scores">char score</div> <div id="sheet-charMo" class="mods">char mod</div>
+            </div>
+            <div id="skillThrows">
+                <div id="saveThrow">
+                    <div id="saveThroCheck">
+                        <input type="checkbox" id="saveThStr" name="saveThStr">
+                        <label for="saveThStr">___Strength</label>
+                        <br>
+                        <input type="checkbox" id="saveThDex" name="saveThDex">
+                        <label for="saveThDex">___Dexterity</label>
+                        <br>
+                        <input type="checkbox" id="saveThCon" name="saveThCon">
+                        <label for="saveThCon">___Constitution</label>
+                        <br>
+                        <input type="checkbox" id="saveThInt" name="saveThInt">
+                        <label for="saveThInt">___Inteligence</label>
+                        <br>
+                        <input type="checkbox" id="saveThWis" name="saveThWis">
+                        <label for="saveThWis">___Wisdom</label>
+                        <br>
+                        <input type="checkbox" id="saveThChar" name="saveThChar">
+                        <label for="saveThChar">___Charisma</label>
+                    </div>
+                    Saving Throws
+                </div> 
+                <div id="skills">
+                    <div id="skillsCheckbox">
+                        <input type="checkbox" id="skillsAcr" name="skillsAcr">
+                        <label for="skillsAcr">___Acrobatics (Dex)</label>
+                        <br>
+                        <input type="checkbox" id="skillsAniHand" name="skillsAniHand">
+                        <label for="skillsAcr">___Animal Handling (Wis)</label>
+                        <br>
+                        <input type="checkbox" id="skillsAth" name="skillsAth">
+                        <label for="skillsAcr">___Athletics (Str)</label>
+                        <br>
+                        <input type="checkbox" id="skillsDec" name="skillsDec">
+                        <label for="skillsAcr">___Deception (Cha)</label>
+                        <br>
+                        <input type="checkbox" id="skillsHis" name="skillsHis">
+                        <label for="skillsAcr">___History (Int)</label>
+                        <br>
+                        <input type="checkbox" id="skillsIns" name="skillsIns">
+                        <label for="skillsAcr">___Insight (Wis)</label>
+                        <br>
+                        <input type="checkbox" id="skillsInt" name="skillsInt">
+                        <label for="skillsAcr">___Intimidation (Int)</label>
+                        <br>
+                        <input type="checkbox" id="skillsInv" name="skillsInv">
+                        <label for="skillsAcr">___Invesitgation (Int)</label>
+                        <br>
+                        <input type="checkbox" id="skillsMed" name="skillsMed">
+                        <label for="skillsAcr">___Medicine (Wis)</label>
+                        <br>
+                        <input type="checkbox" id="skilsNat" name="skilsNat">
+                        <label for="skillsAcr">___Nature (Int)</label>
+                        <br>
+                        <input type="checkbox" id="skilsPerc" name="skilsPerc">
+                        <label for="skillsAcr">___Perception (Wis)</label>
+                        <br>
+                        <input type="checkbox" id="skillsPers" name="skillsPers">
+                        <label for="skillsAcr">___Persuasion (Cha)</label>
+                        <br>
+                        <input type="checkbox" id="skillsRel" name="skillsRel">
+                        <label for="skillsAcr">___Religion (Int)</label>
+                        <br>
+                        <input type="checkbox" id="skillsSlHan" name="skillsSlHan">
+                        <label for="skillsAcr">___Sleight of Hand (Dex)</label>
+                        <br>
+                        <input type="checkbox" id="skillsSte" name="skillsSte">
+                        <label for="skillsAcr">___Stealth (Dex)</label>
+                        <br>
+                        <input type="checkbox" id="skillsSur" name="skillsSur">
+                        <label for="skillsAcr">___Survival (Wis)</label>
+                    </div>
+                    Skills
+                </div>
+            </div>
+            <div id="initiativesnThings">
+                <div id="initiativeandDice"> <div id="sheet-initiative">initiative</div> <div id="sheet-hitDie">hit die</div> </div> <div id="char-desc">character description</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

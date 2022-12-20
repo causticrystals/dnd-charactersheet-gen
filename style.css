@@ -18,3 +18,167 @@ body {
     text-align: center;
     font-size: 16px;
 }
+
+/* css for sheet */
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border: 1px solid black;
+    margin: 40px 150px;
+}
+
+#top-sheet-div {
+    display: grid;
+    grid-template-columns: auto auto;
+    background: rgb(247, 193, 219);
+    height: 120px;
+}
+
+#sheet-name {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    padding: 0px 10px;
+    margin: 10px;
+}
+
+#classRaceDivs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    height: 80px;
+    margin: 10px;
+}
+
+#sheet-clLv {
+    height: 20px;
+    padding: 5px 7px 0px;
+    border-bottom: 1px solid black;
+}
+
+#sheet-bgr {
+    height: 20px;
+    padding: 5px 7px 0px;
+    border-bottom: 1px solid black;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#sheet-race {
+    height: 20px;
+    padding: 0px 7px;
+    border-bottom: 1px solid black;
+}
+
+#sheet-char-align {
+    height: 20px;
+    padding: 0px 7px;
+    border-bottom: 1px solid black;
+}
+
+#bottomHalf {
+    display: grid;
+    grid-template-columns: 180px auto auto;
+    height: 650px;
+}
+
+#skillThrows {
+    background: rgb(252, 240, 201);
+}
+
+#saveThrow {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#saveThroCheck {
+    margin: 5px;
+    font-size: 19px;
+    text-align: left;
+}
+
+#skills {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#skillsCheckbox {
+    margin: 5px;
+    text-align: left;
+}
+
+#initiativesnThings {
+    background: rgb(193, 247, 196);
+}
+
+#initiativeandDice {
+    display: grid;
+    grid-template-columns: auto auto ;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    height: 80px;
+    margin: 10px;
+}
+
+#sheet-hitDie {
+    background: white;
+    border: 1px solid black;
+    height: 20px;
+    padding: 0px 7px;
+}
+
+#sheet-initiative {
+    background: white;
+    border: 1px solid black;
+    height: 20px;
+    padding: 0px 7px;
+}
+
+#sheet-stats-div {
+    background: rgb(171, 171, 226);
+}
+
+#char-desc-div {
+    background-color: rgb(255, 234, 211);
+}
+
+#char-desc {
+    background: white;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px; 
+}
+
+.scores {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin: 10px 60px;
+    align-items: center;
+}
+
+.mods {
+    background: white;
+    border: 1px solid black;
+    height: 20px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 10px 60px;
+}
