@@ -186,7 +186,7 @@ function createSheetArray() {
     charSheet.push(newSheet);
 }
 
-// Helper functions
+// HELPER FUNCTIONS
 function classBonus(saveTrait, die, ability) {
     saves.innerHTML = saveTrait;
     hitDie.innerHTML = die;
