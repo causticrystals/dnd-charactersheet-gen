@@ -5,7 +5,6 @@ let classSelect = document.getElementById("classes");
 let charBgrSelect = document.getElementById("backgrounds");
 
 // button variables & event listeners
-document.getElementById("rand-name-btn").addEventListener("click", randNameBtn);
 raceSelect.addEventListener("click", previewStats);
 classSelect.addEventListener("click", previewStats);
 document.getElementById("preview-traits-btn").addEventListener("click", previewTraitsBtn);
@@ -42,13 +41,6 @@ let charAbility = 0;
 
 // Array for character sheet
 let charSheet = [];
-
-// test array (change to a name array)
-let testArray = ["One", "Two", "Three", "Four"];
-
-function randNameBtn() {
-    nameInp.value = `${randomElement(testArray)}`;
-}
 
 // Change the bonus stats preview
 function previewStats() {

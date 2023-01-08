@@ -22,7 +22,6 @@
             <h3>Character Name:</h3>
             <label for="name-inp">Character Name:</label>
             <input type="text" id="name-inp">
-            <button id="rand-name-btn">Random Name</button>
         </div>
         <br>
         <div id="race-class-div">
@@ -97,7 +96,18 @@
         </div>
         <div id="bottomHalf">
             <div id="sheetScoresDiv">
-                <div id="sheet-strSc" class="scores">str score</div> <div id="sheet-strMo" class="mods">str mod</div> <div id="sheet-dexSc" class="scores">dex score</div> <div id="sheet-dexMo" class="mods">dex mod</div> <div id="sheet-conSc" class="scores">con score</div> <div id="sheet-conMo" class="mods">con mod</div> <div id="sheet-intSc" class="scores">int score</div> <div id="sheet-intMo" class="mods">int mod</div> <div id="sheet-wisSc" class="scores">wis score</div> <div id="sheet-wisMo" class="mods">wis mod</div> <div id="sheet-charSc" class="scores">char score</div> <div id="sheet-charMo" class="mods">char mod</div>
+                <div class="scores">Strength <br> <span id="sheet-strSc" class="scoreSpans"></span></div> 
+                <div id="sheet-strMo" class="mods">str mod</div> 
+                <div class="scores">Dexterity <br> <span id="sheet-dexSc" class="scoreSpans"></span></div> 
+                <div id="sheet-dexMo" class="mods">dex mod</div> 
+                <div class="scores">Constitution <br> <span id="sheet-conSc" class="scoreSpans"></span></div> 
+                <div id="sheet-conMo" class="mods">con mod</div> 
+                <div class="scores">Inteligence <br> <span id="sheet-intSc" class="scoreSpans"></span></div> 
+                <div id="sheet-intMo" class="mods">int mod</div> 
+                <div class="scores">Wisdom <br> <span id="sheet-wisSc" class="scoreSpans"></span></div> 
+                <div id="sheet-wisMo" class="mods">wis mod</div> 
+                <div class="scores">Charisma <br> <span id="sheet-charSc" class="scoreSpans"></span></div> 
+                <div id="sheet-charMo" class="mods">char mod</div>
             </div>
             <div id="skillThrows">
                 <div id="saveThrow">
@@ -128,49 +138,49 @@
                         <label for="skillsAcr"><span>___</span>Acrobatics (Dex)</label>
                         <br>
                         <input type="checkbox" id="skillsAniHand" name="skillsAniHand">
-                        <label for="skillsAcr"><span>___</span>Animal Handling (Wis)</label>
+                        <label for="skillsAniHand"><span>___</span>Animal Handling (Wis)</label>
                         <br>
                         <input type="checkbox" id="skillsAth" name="skillsAth">
-                        <label for="skillsAcr"><span>___</span>Athletics (Str)</label>
+                        <label for="skillsAth"><span>___</span>Athletics (Str)</label>
                         <br>
                         <input type="checkbox" id="skillsDec" name="skillsDec">
-                        <label for="skillsAcr"><span>___</span>Deception (Cha)</label>
+                        <label for="skillsDec"><span>___</span>Deception (Cha)</label>
                         <br>
                         <input type="checkbox" id="skillsHis" name="skillsHis">
-                        <label for="skillsAcr"><span>___</span>History (Int)</label>
+                        <label for="skillsHis"><span>___</span>History (Int)</label>
                         <br>
                         <input type="checkbox" id="skillsIns" name="skillsIns">
-                        <label for="skillsAcr"><span>___</span>Insight (Wis)</label>
+                        <label for="skillsIns"><span>___</span>Insight (Wis)</label>
                         <br>
                         <input type="checkbox" id="skillsInt" name="skillsInt">
-                        <label for="skillsAcr"><span>___</span>Intimidation (Int)</label>
+                        <label for="skillsInt"><span>___</span>Intimidation (Int)</label>
                         <br>
                         <input type="checkbox" id="skillsInv" name="skillsInv">
-                        <label for="skillsAcr"><span>___</span>Invesitgation (Int)</label>
+                        <label for="skillsInv"><span>___</span>Invesitgation (Int)</label>
                         <br>
                         <input type="checkbox" id="skillsMed" name="skillsMed">
-                        <label for="skillsAcr"><span>___</span>Medicine (Wis)</label>
+                        <label for="skillsMed"><span>___</span>Medicine (Wis)</label>
                         <br>
                         <input type="checkbox" id="skilsNat" name="skilsNat">
-                        <label for="skillsAcr"><span>___</span>Nature (Int)</label>
+                        <label for="skillsNat"><span>___</span>Nature (Int)</label>
                         <br>
                         <input type="checkbox" id="skilsPerc" name="skilsPerc">
-                        <label for="skillsAcr"><span>___</span>Perception (Wis)</label>
+                        <label for="skillsPerc"><span>___</span>Perception (Wis)</label>
                         <br>
                         <input type="checkbox" id="skillsPers" name="skillsPers">
-                        <label for="skillsAcr"><span>___</span>Persuasion (Cha)</label>
+                        <label for="skillsPers"><span>___</span>Persuasion (Cha)</label>
                         <br>
                         <input type="checkbox" id="skillsRel" name="skillsRel">
-                        <label for="skillsAcr"><span>___</span>Religion (Int)</label>
+                        <label for="skillsRel"><span>___</span>Religion (Int)</label>
                         <br>
                         <input type="checkbox" id="skillsSlHan" name="skillsSlHan">
-                        <label for="skillsAcr"><span>___</span>Sleight of Hand (Dex)</label>
+                        <label for="skillsSlHan"><span>___</span>Sleight of Hand (Dex)</label>
                         <br>
                         <input type="checkbox" id="skillsSte" name="skillsSte">
-                        <label for="skillsAcr"><span>___</span>Stealth (Dex)</label>
+                        <label for="skillsSte"><span>___</span>Stealth (Dex)</label>
                         <br>
                         <input type="checkbox" id="skillsSur" name="skillsSur">
-                        <label for="skillsAcr"><span>___</span>Survival (Wis)</label>
+                        <label for="skillsSur"><span>___</span>Survival (Wis)</label>
                     </div>
                     Skills
                 </div>
