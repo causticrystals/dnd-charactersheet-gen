@@ -176,6 +176,8 @@ function createSheetArray() {
     let newSheet = Object.assign({str: strSpan.innerHTML}, {dex: dexSpan.innerHTML}, {con: conSpan.innerHTML}, {int: intSpan.innerHTML}, {wis: wisSpan.innerHTML}, {char: charSpan.innerHTML}, {race: raceSelect.value}, {class: classSelect.value}, {saves: saves.innerHTML}, {hitDie: hitDie.innerHTML}, {primary: prAbility.innerHTML}, {background: charBgrSelect.value}, {name: nameInp.value}, {strMod: strModSpan.innerHTML}, {dexMod: dexModSpan.innerHTML}, {conMod: conModSpan.innerHTML}, {intMod: intModSpan.innerHTML}, {wisMod: wisModSpan.innerHTML}, {charMod: charModSpan.innerHTML});
     JSON.stringify(newSheet);
     charSheet.push(newSheet);
+    // put character selections onto sheet
+    assembleSheet();
 }
 
 // HELPER FUNCTIONS

@@ -12,7 +12,7 @@
     <script defer src="js/sheet-after.js"></script>
 </head>
 <body>
-    <h1>D&D Character Sheet Generator</h1>
+    <h1>Basic D&D Character Sheet Generator</h1>
     <div id="start-div">
         <button id="begin-btn">Begin</button>
     </div>
@@ -161,10 +161,10 @@
                         <input type="checkbox" id="skillsMed" name="skillsMed">
                         <label for="skillsMed"><span>___</span>Medicine (Wis)</label>
                         <br>
-                        <input type="checkbox" id="skilsNat" name="skilsNat">
+                        <input type="checkbox" id="skillsNat" name="skillsNat">
                         <label for="skillsNat"><span>___</span>Nature (Int)</label>
                         <br>
-                        <input type="checkbox" id="skilsPerc" name="skilsPerc">
+                        <input type="checkbox" id="skillsPerc" name="skillsPerc">
                         <label for="skillsPerc"><span>___</span>Perception (Wis)</label>
                         <br>
                         <input type="checkbox" id="skillsPers" name="skillsPers">
@@ -186,7 +186,8 @@
                 </div>
             </div>
             <div id="initiativesnThings">
-                <div id="initiativeandDice"> <div id="sheet-initiative">initiative</div> <div id="sheet-hitDie">hit die</div> </div> <div id="char-desc">character description</div>
+                <div id="initiativeandDice"> <div id="sheet-initiative">Initiative <br> <span id="init-span"></span></div> <div id="sheet-hitDie">Hit Die <br> <span id="hitDie-span"></span></div> <div id="sheet-proficiency">Proficiency Bonus <br> <span id="profBonus-span"></span></div> </div> 
+                <div id="char-desc">Character Description <br> <input class="charDescInp" type="text" placeholder="Describe your character..."></div>
             </div>
         </div>
     </div>

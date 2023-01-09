@@ -136,14 +136,21 @@ body {
 #sheet-hitDie {
     background: white;
     border: 1px solid black;
-    height: 20px;
+    height: 40px;
     padding: 0px 7px;
 }
 
 #sheet-initiative {
     background: white;
     border: 1px solid black;
-    height: 20px;
+    height: 40px;
+    padding: 0px 7px;
+}
+
+#sheet-proficiency {
+    background: white;
+    border: 1px solid black;
+    height: 36px;
     padding: 0px 7px;
 }
 
@@ -161,6 +168,11 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px; 
+}
+
+.charDescInp {
+    height: 260px;
+    width: 300px;
 }
 
 .scores {
